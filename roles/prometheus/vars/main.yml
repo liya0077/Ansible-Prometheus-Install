@@ -1,0 +1,2 @@
+prometheus_targets:
+  - "localhost:9090"
