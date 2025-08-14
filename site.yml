@@ -1,6 +1,6 @@
 ---
 - name: Install and configure Prometheus
-  hosts: tag_monitoring_true
+  hosts: tag_monitoring_true      # Use the group from inventory
   become: yes
   vars:
     prometheus_version: "2.52.0"
