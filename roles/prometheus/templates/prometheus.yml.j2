@@ -8,3 +8,18 @@ scrape_configs:
 {% for target in prometheus_targets %}
           - '{{ target }}'
 {% endfor %}
+
+  - job_name: 'jenkins'
+    metrics_path: /prometheus
+    static_configs:
+      - targets:
+{% for jenkins in jenkins_servers %}
+          - '{{ jenkins }}:8080'
+{% endfor %}
+
+  - job_name: 'node_exporter'
+    static_configs:
+      - targets:
+{% for jenkins in jenkins_servers %}
+          - '{{ jenkins }}:9100'
+{% endfor %}
