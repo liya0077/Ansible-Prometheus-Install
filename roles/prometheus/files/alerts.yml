@@ -7,4 +7,5 @@ groups:
         labels:
           severity: critical
         annotations:
-          summary: "Instance {{ $labels.instance }} is down"
+          summary: 'Instance {{ $labels.instance }} is down'
+          description: 'Job {{ $labels.job }} on {{ $labels.instance }} is unreachable for more than 10s.'
