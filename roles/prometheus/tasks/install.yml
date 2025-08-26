@@ -67,6 +67,12 @@
     mode: "0644"
   notify: restart prometheus
 
+- name: Copy Prometheus alert rules
+  ansible.builtin.copy:
+    src: alerts.yml
+    dest: /etc/prometheus/alerts.yml
+    mode: "0644"
+
 - name: Deploy Prometheus systemd service
   ansible.builtin.copy:
     dest: "{{ prometheus_service_path }}"
