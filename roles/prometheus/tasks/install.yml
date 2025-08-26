@@ -72,6 +72,7 @@
     src: alerts.yml
     dest: /etc/prometheus/alerts.yml
     mode: "0644"
+  notify: restart prometheus  
 
 - name: Deploy Prometheus systemd service
   ansible.builtin.copy:
