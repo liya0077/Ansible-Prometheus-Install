@@ -1,5 +1,6 @@
 # vars/main.yml
 prometheus_version: "2.52.0"
+alertmanager_version: "0.27.0"
 prometheus_user: prometheus
 prometheus_group: prometheus
 prometheus_install_dir: /usr/local/bin
@@ -7,3 +8,11 @@ prometheus_config_dir: /etc/prometheus
 prometheus_data_dir: /var/lib/prometheus
 prometheus_service_path: /etc/systemd/system/prometheus.service
 prometheus_port: 9090
+alertmanager_port: 9093
+
+alertmanager_email_from: "liyakath.devops@gmail.com"
+alertmanager_email_user: "liyakath.devops@gmail.com"
+alertmanager_email_pass: "lpre qqoj ofcv ggzf"
+alertmanager_email_to: "liyaali193@gmail.com"
+
+
