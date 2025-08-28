@@ -4,3 +4,11 @@
     name: prometheus
     state: restarted
     enabled: yes
+
+- name: restart alertmanager
+  ansible.builtin.service:
+    name: alertmanager
+    state: restarted
+    enabled: yes
+
+    
