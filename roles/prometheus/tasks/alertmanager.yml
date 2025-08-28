@@ -27,6 +27,14 @@
     group: "{{ prometheus_group }}"
     mode: "0755"
 
+- name: Create Alertmanager data dir
+  ansible.builtin.file:
+    path: /var/lib/alertmanager
+    state: directory
+    owner: "{{ prometheus_user }}"
+    group: "{{ prometheus_group }}"
+    mode: "0755"    
+
 - name: Deploy Alertmanager configuration
   ansible.builtin.template:
     src: alertmanager.yml.j2
