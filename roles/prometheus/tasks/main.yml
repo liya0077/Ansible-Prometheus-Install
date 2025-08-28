@@ -1,2 +1,5 @@
 - name: Include install tasks
   include_tasks: install.yml
+
+- name: Include alertmanager setup
+  include_tasks: alertmanager.yml
